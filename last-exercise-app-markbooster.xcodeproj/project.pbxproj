@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85330CE71CF771E700F00789 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85330CE61CF771E700F00789 /* FeedVC.swift */; };
+		85330CE91CF7731B00F00789 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85330CE81CF7731B00F00789 /* PostCell.swift */; };
 		856D47531CF1F7620026DBDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D47521CF1F7620026DBDA /* AppDelegate.swift */; };
 		856D47551CF1F7620026DBDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D47541CF1F7620026DBDA /* ViewController.swift */; };
 		856D47581CF1F7620026DBDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856D47561CF1F7620026DBDA /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		1A968595446C0C60C0C8B96E /* Pods-last-exercise-app-markbooster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-last-exercise-app-markbooster.release.xcconfig"; path = "Pods/Target Support Files/Pods-last-exercise-app-markbooster/Pods-last-exercise-app-markbooster.release.xcconfig"; sourceTree = "<group>"; };
+		85330CE61CF771E700F00789 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		85330CE81CF7731B00F00789 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		856D474F1CF1F7620026DBDA /* last-exercise-app-markbooster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "last-exercise-app-markbooster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		856D47521CF1F7620026DBDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		856D47541CF1F7620026DBDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +109,6 @@
 				856D47651CF1F7840026DBDA /* View */,
 				856D47641CF1F77B0026DBDA /* Controller */,
 				856D47521CF1F7620026DBDA /* AppDelegate.swift */,
-				856D47541CF1F7620026DBDA /* ViewController.swift */,
 				856D47561CF1F7620026DBDA /* Main.storyboard */,
 				856D47591CF1F7620026DBDA /* Assets.xcassets */,
 				856D475B1CF1F7620026DBDA /* LaunchScreen.storyboard */,
@@ -117,6 +120,8 @@
 		856D47641CF1F77B0026DBDA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				856D47541CF1F7620026DBDA /* ViewController.swift */,
+				85330CE61CF771E700F00789 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				856D47711CF1FAB00026DBDA /* MaterialView.swift */,
 				856D47761CF1FF5D0026DBDA /* MaterialButton.swift */,
 				85BF19C21CF2036F00197A55 /* MaterialTextField.swift */,
+				85330CE81CF7731B00F00789 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -321,6 +327,8 @@
 				85BF19CD1CF2257000197A55 /* DataService.swift in Sources */,
 				856D47721CF1FAB00026DBDA /* MaterialView.swift in Sources */,
 				856D47551CF1F7620026DBDA /* ViewController.swift in Sources */,
+				85330CE71CF771E700F00789 /* FeedVC.swift in Sources */,
+				85330CE91CF7731B00F00789 /* PostCell.swift in Sources */,
 				856D47531CF1F7620026DBDA /* AppDelegate.swift in Sources */,
 				856D47751CF1FB080026DBDA /* Constants.swift in Sources */,
 				856D47771CF1FF5D0026DBDA /* MaterialButton.swift in Sources */,
