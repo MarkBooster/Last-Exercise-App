@@ -69,6 +69,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             var img: UIImage?
             if let url = post.imageUrl {
+                print(debugDescription)
                 img = FeedVC.imageCache.objectForKey(url) as? UIImage
             }
             cell.configureCell(post, img: img)
