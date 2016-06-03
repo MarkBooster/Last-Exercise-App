@@ -18,7 +18,12 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var likesLbl: UILabel!
     @IBOutlet weak var likeImage: UIImageView!
     
-    var post: Post!
+    private var _post: Post?
+    var post: Post? {
+        return _post
+    }
+    
+    
     var request: Request?
     var likeRef: Firebase!
 
@@ -40,10 +45,11 @@ class PostCell: UITableViewCell {
     }
     
     func configureCell(post: Post, img: UIImage?) {
-        self.post = post
+        self._post = post
         likeRef = DataService.ds.REF_USER_CURRENT.childByAppendingPath("likes").childByAppendingPath(post.postKey)
         self.descriptionText.text = post.postDescription
         self.likesLbl.text = "\(post.likes)"
+        
         
         if post.imageUrl != nil {
             
@@ -56,7 +62,7 @@ class PostCell: UITableViewCell {
                     if err == nil {
                         let img = UIImage(data: data!)!
                         self.showcaseImg.image = img
-                        FeedVC.imageCache.setObject(img, forKey: self.post.imageUrl!)
+                        FeedVC.imageCache.setObject(img, forKey: self.post!.imageUrl!)
                     }
                     
                 })
@@ -84,12 +90,13 @@ class PostCell: UITableViewCell {
             
             if let doesNotExist = snapshot.value as? NSNull {
                 self.likeImage.image = UIImage(named: "heart-full")
-                self.post.adjustLikes(true)
+                self.post!.adjustLikes(true)
                 self.likeRef.setValue(true)
             } else {
-                self.likeRef.removeValue()
                 self.likeImage.image = UIImage(named: "heart-empty")
-                self.post.adjustLikes(false)
+                self.post!.adjustLikes(false)
+                self.likeRef.removeValue()
+
                 
             }
             
