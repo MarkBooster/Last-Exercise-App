@@ -27,6 +27,7 @@
 		85BF19C91CF20B2B00197A55 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BF19C61CF20B2B00197A55 /* FBSDKCoreKit.framework */; };
 		85BF19CA1CF20B2B00197A55 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BF19C71CF20B2B00197A55 /* FBSDKLoginKit.framework */; };
 		85BF19CD1CF2257000197A55 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BF19CC1CF2257000197A55 /* DataService.swift */; };
+		85F3F64F1D05FFEE00779559 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85F3F64E1D05FFEE00779559 /* GoogleService-Info.plist */; };
 		BC92E6649F2EC7339DFE15D2 /* Pods_last_exercise_app_markbooster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF519493BC858ED2EE86F3A2 /* Pods_last_exercise_app_markbooster.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		85BF19C61CF20B2B00197A55 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		85BF19C71CF20B2B00197A55 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		85BF19CC1CF2257000197A55 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		85F3F64E1D05FFEE00779559 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE982B60204AECE8CED9D348 /* Pods-last-exercise-app-markbooster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-last-exercise-app-markbooster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-last-exercise-app-markbooster/Pods-last-exercise-app-markbooster.debug.xcconfig"; sourceTree = "<group>"; };
 		AF519493BC858ED2EE86F3A2 /* Pods_last_exercise_app_markbooster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_last_exercise_app_markbooster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 		856D47461CF1F7620026DBDA = {
 			isa = PBXGroup;
 			children = (
+				85F3F64E1D05FFEE00779559 /* GoogleService-Info.plist */,
 				856D47511CF1F7620026DBDA /* last-exercise-app-markbooster */,
 				856D47501CF1F7620026DBDA /* Products */,
 				BE7628436427BACFE8479411 /* Pods */,
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				856D476D1CF1F7CF0026DBDA /* NotoSans-Bold.ttf in Resources */,
+				85F3F64F1D05FFEE00779559 /* GoogleService-Info.plist in Resources */,
 				856D475D1CF1F7620026DBDA /* LaunchScreen.storyboard in Resources */,
 				856D476E1CF1F7CF0026DBDA /* NotoSans-BoldItalic.ttf in Resources */,
 				856D476F1CF1F7CF0026DBDA /* NotoSans-Italic.ttf in Resources */,
