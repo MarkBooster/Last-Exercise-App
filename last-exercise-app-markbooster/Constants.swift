@@ -18,4 +18,4 @@ let KEY_UID = "uid"
 let SEGUE_LOGGED_IN = "LoggedIn"
 
 //Statuscodes
-let STATUS_ACCOUNT_NONEXIST = -8
+let STATUS_ACCOUNT_NONEXIST = 17011

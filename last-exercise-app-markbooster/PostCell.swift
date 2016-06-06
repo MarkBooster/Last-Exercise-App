@@ -25,7 +25,7 @@ class PostCell: UITableViewCell {
     
     
     var request: Request?
-    var likeRef: Firebase!
+    var likeRef: FIRDatabaseReference!
 
     override func awakeFromNib() {
         super.awakeFromNib()

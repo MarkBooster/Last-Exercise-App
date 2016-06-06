@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Firebase
 
 class ViewController: UIViewController {
     
@@ -40,19 +41,24 @@ class ViewController: UIViewController {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 print("succesfully loggid in with Facebook \(accessToken)")
                 
-                DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+//                DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+                
+                let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
+                
+                FIRAuth.auth()?.signInWithCredential(credential, completion: { (user, error) in
+
+                
                     if error != nil {
                         print("Login Failed. \(error)")
                     } else {
-                        print("Logged in! \(authData)")
+                        print("Logged in! \(user)")
                         
-                        let user = ["provider": authData.provider!, "blah": "test"]
-                        DataService.ds.createFirebaseUser(authData.uid, user: user)
+                        let userData = ["provider": credential.provider]
+                        DataService.ds.createFirebaseUser(user!.uid, user: userData)
                         
-                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                        NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
                         self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                     }
-                    
                 })
                 
                 
@@ -62,21 +68,25 @@ class ViewController: UIViewController {
     //Account already exist try that one to
     @IBAction func attemptLoginBtn(sender: UIButton!) {
         if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
-            DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
+
+            FIRAuth.auth()?.signInWithEmail(email, password: pwd, completion: { (user, error) in
+
                 if error != nil {
                     print(error)
-                    if error.code == STATUS_ACCOUNT_NONEXIST {
-                        DataService.ds.REF_BASE.createUser(email, password: pwd, withValueCompletionBlock: { error, result in
+                    
+                    if error!.code == STATUS_ACCOUNT_NONEXIST {
+
+                        FIRAuth.auth()?.createUserWithEmail(email, password: pwd, completion: { (user, error) in
+
+                        
                             if error != nil {
                                 self.showErrorAlert("Could not create Account", msg: "Problem create Account, Try again")
                             } else {
-                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
+                                NSUserDefaults.standardUserDefaults().setValue(user!.uid, forKey: KEY_UID)
                                 
-                                DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: {
-                                    err, authData in
-                                    let user = ["provider": authData.provider!, "blah": "emailtest"]
-                                    DataService.ds.createFirebaseUser(authData.uid, user: user)
-                                })
+                                    let userData = ["provider": "email"]
+                                    DataService.ds.createFirebaseUser(user!.uid, user: userData)
+
                                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                             }
                         })
@@ -85,7 +95,7 @@ class ViewController: UIViewController {
                     }
                     
                 } else {
-                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil) // look at this for sign in
                 }
             })
             
