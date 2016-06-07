@@ -42,15 +42,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                         let key = snap.key
                         let post = Post(postKey: key, dictionary: postDict)
                         self.posts.append(post)
+                        
                     }
                 }
+                
+                
             }
-            
-            
+        self.posts = self.posts.reverse()
             self.tableView.reloadData()
+         
         })
-
-
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -168,6 +170,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         tableView.reloadData()
     }
+
 }
     
     

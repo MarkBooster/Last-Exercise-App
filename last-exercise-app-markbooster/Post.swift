@@ -58,7 +58,7 @@ class Post {
             self._postDescription = desc
         }
         
-        self._postRef = DataService.ds.REF_POSTS.childByAppendingPath(self._postKey)
+        self._postRef = DataService.ds.REF_POSTS.child(self._postKey)
         
     }
     
@@ -69,7 +69,7 @@ class Post {
             _likes = _likes - 1
         }
         
-        _postRef.childByAppendingPath("likes").setValue(_likes)
+        _postRef.child("likes").setValue(_likes)
     }
 }
 
