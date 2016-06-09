@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850B243A1D09873600312EA8 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850B24391D09873600312EA8 /* SignUpVC.swift */; };
 		85330CE71CF771E700F00789 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85330CE61CF771E700F00789 /* FeedVC.swift */; };
 		85330CE91CF7731B00F00789 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85330CE81CF7731B00F00789 /* PostCell.swift */; };
 		856802CD1CFB5F6C00C78504 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856802CC1CFB5F6C00C78504 /* Post.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		1A968595446C0C60C0C8B96E /* Pods-last-exercise-app-markbooster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-last-exercise-app-markbooster.release.xcconfig"; path = "Pods/Target Support Files/Pods-last-exercise-app-markbooster/Pods-last-exercise-app-markbooster.release.xcconfig"; sourceTree = "<group>"; };
+		850B24391D09873600312EA8 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		85330CE61CF771E700F00789 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		85330CE81CF7731B00F00789 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		856802CC1CFB5F6C00C78504 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				856D47541CF1F7620026DBDA /* ViewController.swift */,
 				85330CE61CF771E700F00789 /* FeedVC.swift */,
+				850B24391D09873600312EA8 /* SignUpVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				85BF19C31CF2036F00197A55 /* MaterialTextField.swift in Sources */,
 				85BF19CD1CF2257000197A55 /* DataService.swift in Sources */,
 				856D47721CF1FAB00026DBDA /* MaterialView.swift in Sources */,
+				850B243A1D09873600312EA8 /* SignUpVC.swift in Sources */,
 				856D47551CF1F7620026DBDA /* ViewController.swift in Sources */,
 				85330CE71CF771E700F00789 /* FeedVC.swift in Sources */,
 				85330CE91CF7731B00F00789 /* PostCell.swift in Sources */,

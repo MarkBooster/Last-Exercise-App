@@ -14,6 +14,8 @@
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
             <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
+            <string>NotoSans-Bold</string>
         </mutableArray>
         <mutableArray key="NotoSans-Regular.ttf">
             <string>NotoSans</string>
@@ -27,7 +29,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="last_exercise_app_markbooster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="last_exercise_app_markbooster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -145,11 +147,26 @@
                                             <constraint firstAttribute="width" constant="232" id="z8c-Wn-ZLq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
-                                        <state key="normal" title="Login / Signup">
+                                        <state key="normal" title="Login ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="attemptLoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IQw-hD-P8y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGv-P4-M17" customClass="MaterialButton" customModule="last_exercise_app_markbooster" customModuleProvider="target">
+                                        <rect key="frame" x="164" y="264" width="232" height="33"/>
+                                        <color key="backgroundColor" red="0.95686274510000002" green="0.31764705879999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="XxE-b2-t0N"/>
+                                            <constraint firstAttribute="width" constant="232" id="aaJ-gv-EtU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                        <state key="normal" title="Signup">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="attemptLoginBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pOE-Rw-k3D"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -159,6 +176,7 @@
                                     <constraint firstItem="mw7-YD-poi" firstAttribute="top" secondItem="H6w-uv-alJ" secondAttribute="top" constant="20" id="CBy-OA-jBY"/>
                                     <constraint firstItem="cUf-hD-2IQ" firstAttribute="leading" secondItem="mw7-YD-poi" secondAttribute="leading" id="DOa-Wl-Q4W"/>
                                     <constraint firstItem="9R1-my-fEG" firstAttribute="centerX" secondItem="H6w-uv-alJ" secondAttribute="centerX" id="HCn-qm-HaC"/>
+                                    <constraint firstItem="HGv-P4-M17" firstAttribute="centerX" secondItem="H6w-uv-alJ" secondAttribute="centerX" id="Lk5-r5-F52"/>
                                     <constraint firstItem="Xfh-CU-6m8" firstAttribute="trailing" secondItem="cUf-hD-2IQ" secondAttribute="trailing" id="MGh-J3-vqx"/>
                                     <constraint firstItem="mw7-YD-poi" firstAttribute="leading" secondItem="H6w-uv-alJ" secondAttribute="leading" constant="20" id="O1n-uE-9HZ"/>
                                     <constraint firstItem="Xfh-CU-6m8" firstAttribute="top" secondItem="cUf-hD-2IQ" secondAttribute="bottom" constant="20" id="cYk-yn-x85"/>
@@ -167,6 +185,7 @@
                                     <constraint firstAttribute="height" constant="128" id="fjY-9q-oDJ"/>
                                     <constraint firstItem="Xfh-CU-6m8" firstAttribute="leading" secondItem="cUf-hD-2IQ" secondAttribute="leading" id="gx8-W2-daX"/>
                                     <constraint firstAttribute="trailing" secondItem="cUf-hD-2IQ" secondAttribute="trailing" constant="20" id="iEj-ZQ-HuJ"/>
+                                    <constraint firstItem="HGv-P4-M17" firstAttribute="top" secondItem="9R1-my-fEG" secondAttribute="bottom" constant="30" id="rlr-n2-IVQ"/>
                                     <constraint firstItem="mw7-YD-poi" firstAttribute="top" secondItem="H6w-uv-alJ" secondAttribute="top" constant="20" id="t4u-Ya-2cT"/>
                                 </constraints>
                                 <variation key="default">
@@ -196,11 +215,30 @@
                         <outlet property="emailField" destination="cUf-hD-2IQ" id="emh-qM-PKT"/>
                         <outlet property="passwordField" destination="Xfh-CU-6m8" id="TLu-Bi-n09"/>
                         <segue destination="hEu-vh-qnz" kind="show" identifier="LoggedIn" id="izc-bx-9JW"/>
+                        <segue destination="L8i-HF-tuQ" kind="show" id="IYd-UD-n6b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="306" y="312"/>
+        </scene>
+        <!--Sign UpVC-->
+        <scene sceneID="IxK-mi-FsX">
+            <objects>
+                <viewController id="L8i-HF-tuQ" customClass="SignUpVC" customModule="last_exercise_app_markbooster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BXd-fe-8Xp"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLJ-I6-5jQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="khR-52-wOU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qLA-No-Bvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="1041"/>
         </scene>
         <!--FeedVC-->
         <scene sceneID="ZR1-Rz-YNf">
@@ -384,7 +422,22 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="DSe-m4-tTJ"/>
+                    <navigationItem key="navigationItem" id="DSe-m4-tTJ">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="NMY-bq-8jt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8za-Fd-ZeF" customClass="MaterialButton" customModule="last_exercise_app_markbooster" customModuleProvider="target">
+                                <rect key="frame" x="447" y="5" width="133" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.70588235290000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutBtn:" destination="U55-YO-CGj" eventType="touchUpInside" id="jip-TR-Gbq"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageSelectorImage" destination="Ck9-MB-xgV" id="AEf-XV-MFc"/>
                         <outlet property="postField" destination="w1c-j7-OW6" id="O9m-U9-BnT"/>

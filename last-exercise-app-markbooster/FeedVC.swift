@@ -170,6 +170,23 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         tableView.reloadData()
     }
+    @IBAction func logOutBtn(sender: AnyObject) {
+        
+        
+        try! FIRAuth.auth()!.signOut()
+        
+        
+        // Remove the user's uid from storage.
+        
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: KEY_UID)
+        
+        // Head back to Login!
+        
+        let ViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Login")
+        UIApplication.sharedApplication().keyWindow?.rootViewController = ViewController
+//        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 
 }
     
