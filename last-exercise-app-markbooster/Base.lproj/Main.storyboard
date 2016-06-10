@@ -399,6 +399,9 @@
                                                 <exclude reference="HPf-yq-Lts"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="signUpBtnPressed:" destination="L8i-HF-tuQ" eventType="touchUpInside" id="DeN-g6-I6o"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PZs-lM-piM">
                                         <rect key="frame" x="180" y="351" width="200" height="33"/>
@@ -449,6 +452,12 @@
                             <constraint firstAttribute="trailing" secondItem="175-bO-K2V" secondAttribute="trailing" id="yDH-6V-0oJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="15P-Zu-CmF" id="R8K-0Y-lZR"/>
+                        <outlet property="passwordField" destination="WaQ-XB-WTW" id="B3n-sz-j4h"/>
+                        <outlet property="usernameField" destination="0bs-Me-XpY" id="Pk4-9s-1BD"/>
+                        <segue destination="hEu-vh-qnz" kind="show" identifier="NewUserLoggedIn" id="2P3-59-MDX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLA-No-Bvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -695,4 +704,7 @@
         <image name="profile" width="100" height="104"/>
         <image name="screen" width="300" height="534"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2P3-59-MDX"/>
+    </inferredMetricsTieBreakers>
 </document>
