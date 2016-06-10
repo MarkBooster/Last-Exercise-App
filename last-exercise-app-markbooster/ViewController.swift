@@ -111,6 +111,11 @@ class ViewController: UIViewController {
         alert.addAction(action)
         presentViewController(alert, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func signUpBtnPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("SignUp", sender: UIButton.self)
+    }
 
 
 }
